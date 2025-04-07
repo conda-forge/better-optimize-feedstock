@@ -1,5 +1,5 @@
 {% set name = "better-optimize" %}
-{% set version = "0.0.13" %}
+{% set version = "0.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/better_optimize-{{ version }}.tar.gz
-  sha256: eb2c3b052c8876ae6bd5f835231a1f69d230640eec90e31c42000d2c56393a61
+  sha256: 396f061b7f8fbf3f8c5d3f34ab0f72fcb49ca1b643112da6345261e355d62a57
 
 build:
   noarch: python
