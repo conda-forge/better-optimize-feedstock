@@ -1,14 +1,14 @@
 {% set name = "better-optimize" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3" %}
 {% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/better_optimize-{{ version }}.tar.gz
-  sha256: 406d1a86266b25ce1a44bedf961632c3dcefce9710464594aff6771029fa7c94
+  sha256: 46ed74731a2496446a19cc45b808e7500a5fe6916d825c6e22396a6fd2655168
 
 build:
   noarch: python
@@ -23,6 +23,9 @@ requirements:
     - versioneer
     - pip
   run:
+    - joblib
+    - pandas
+    - threadpoolctl
     - python >={{ python_min }}
     - numpy
     - scipy >=1.15
